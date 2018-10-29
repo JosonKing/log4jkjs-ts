@@ -23,8 +23,8 @@ logger.warn('hello log');
 logger.debug('hello log');
 ```
 
-> typescript
-```TypeScript
+> TypeScript
+```typescript
 import Logger = require('log4jkjs');
 let logger = new Logger("test");
 
