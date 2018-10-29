@@ -9,7 +9,7 @@ npm install log4jkjs
 ```
 
 ## usage
-> javascript
+> JavaScript
 ```javascript
 var Logger = require("log4jkjs");
 var logger = new Logger("test");
@@ -24,7 +24,7 @@ logger.debug('hello log');
 ```
 
 > typescript
-```typescript
+```TypeScript
 import Logger = require('log4jkjs');
 let logger = new Logger("test");
 
