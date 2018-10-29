@@ -1,0 +1,32 @@
+{
+  "name": "log4jkjs",
+  "version": "0.5.2",
+  "description": "log for javascript",
+  "main": "./lib/Index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "npm run tsc & tsc ./tests/index.ts & node ./tests/index.js",
+    "copy": "node ./scripts/copyPublish.js",
+    "pub": "npm run tsc & npm run copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:JosonKing/log4jkjs-ts.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "log",
+    "javascript",
+    "typescript",
+    "es6"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "joson",
+  "license": "ISC",
+  "devDependencies": {
+    "fs-jetpack": "^2.2.0"
+  }
+}
