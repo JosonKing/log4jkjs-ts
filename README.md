@@ -15,12 +15,12 @@ var Logger = require("log4jkjs");
 var logger = new Logger("test");
 
 // logger.config(); // default: 'ERROR', 'black', 'console'
-logger.config('log', 'red', 'console');
+logger.config('LOG', 'red', 'console');  // LOG, INFO, DEBUG, WARN, ERROR, CLOSE
 logger.log('hello log', 'log2', 'log3');
 logger.info('hello log');
-logger.error('hello log');
-logger.warn('hello log');
 logger.debug('hello log');
+logger.warn('hello log');
+logger.error('hello log');
 ```
 
 > TypeScript
@@ -29,12 +29,12 @@ import Logger = require('log4jkjs');
 let logger = new Logger("test");
 
 // logger.config(); // default: 'ERROR', 'black', 'console'
-logger.config('log', 'red', 'console');
+logger.config('LOG', 'red', 'console'); // LOG, INFO, DEBUG, WARN, ERROR, CLOSE
 logger.log('hello log', 'log2', 'log3');
 logger.info('hello log');
-logger.error('hello log');
-logger.warn('hello log');
 logger.debug('hello log');
+logger.warn('hello log');
+logger.error('hello log');
 ```
 > Output
 ```bash

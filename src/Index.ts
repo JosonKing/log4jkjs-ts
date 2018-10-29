@@ -22,8 +22,14 @@ class Logger {
     this.appender = appender || 'console';
   }
 
+  public none (...message) {
+    if (Utils.shouldLog(this.level, 6)) {
+      
+    }
+  }
+
   public log (...message) {
-    if (Utils.shouldLog(this.level, 0)) {
+    if (Utils.shouldLog(this.level, 1)) {
       if (this.appender.toLowerCase() == 'file') {
         // var blob = new Blob(["Hello, world!"], {
         //   type: "text/plain;charset=utf-8"
@@ -36,25 +42,25 @@ class Logger {
   }
 
   public info (...message) {
-    if (Utils.shouldLog(this.level, 1)) {
+    if (Utils.shouldLog(this.level, 2)) {
       console.info(Utils.dateFtt('yyyy-MM-dd hh:mm:ss.S', new Date()), 'INFO', this.name, '=>', ...message);
     }
   }
 
   public debug (...message) {
-    if (Utils.shouldLog(this.level, 2)) {
+    if (Utils.shouldLog(this.level, 3)) {
       console.debug(Utils.dateFtt('yyyy-MM-dd hh:mm:ss.S', new Date()), 'DEBUG', this.name, '=>', ...message);
     }
   }
 
   public warn (...message) {
-    if (Utils.shouldLog(this.level, 3)) {
+    if (Utils.shouldLog(this.level, 4)) {
       console.warn(Utils.dateFtt('yyyy-MM-dd hh:mm:ss.S', new Date()), 'WARN', this.name, '=>', ...message);
     }
   }
 
   public error(...message) {
-    if (Utils.shouldLog(this.level, 4)) {
+    if (Utils.shouldLog(this.level, 5)) {
       console.error(Utils.dateFtt('yyyy-MM-dd hh:mm:ss.S', new Date()), 'ERROR', this.name, '=>', ...message);
     }
   }

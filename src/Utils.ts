@@ -2,18 +2,24 @@
 
 class Utils {
   static shouldLog (level, methodLevel) {
-    var levelNumber = 0;
-    if (level.toLowerCase() == 'info') {
+    var levelNumber = 1;
+    if (level.toLowerCase() == 'log') {
       levelNumber = 1;
     }
-    if (level.toLowerCase() == 'debug') {
+    if (level.toLowerCase() == 'info') {
       levelNumber = 2;
     }
-    if (level.toLowerCase() == 'warn') {
+    if (level.toLowerCase() == 'debug') {
       levelNumber = 3;
     }
-    if (level.toLowerCase() == 'error') {
+    if (level.toLowerCase() == 'warn') {
       levelNumber = 4;
+    }
+    if (level.toLowerCase() == 'error') {
+      levelNumber = 5;
+    }
+    if (level.toLowerCase() == 'close') {
+      levelNumber = 6;
     }
     if (methodLevel >= levelNumber) {
       return true;
